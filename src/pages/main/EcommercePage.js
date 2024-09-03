@@ -33,7 +33,7 @@ export default function EcommercePage() {
               <ul className="mc-breadcrumb-list">
                 <li className="mc-breadcrumb-item">Inicio</li>
                 <li className="mc-breadcrumb-item">
-                  <Link to="/home" className="mc-breadcrumb-link">
+                  <Link to="/" className="mc-breadcrumb-link">
                     Dashboard
                   </Link>
                 </li>

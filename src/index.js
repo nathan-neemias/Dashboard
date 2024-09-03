@@ -11,6 +11,7 @@ import { SidebarProvider } from './context/Sidebar'
 import { LoaderProvider } from './context/Preloader'
 import { TranslatorProvider } from './context/Translator'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { Navigate } from 'react-router-dom' // Importe o componente Navigate para redirecionamento
 import { LoginPage } from './pages/auth'
 import { ErrorPage } from './pages/others'
 import {
@@ -29,8 +30,8 @@ import RequestClientPage from './pages/main/RequestClientPage'
 import RequestProfessionalPage from './pages/main/RequestProfessionalPage'
 
 const router = createBrowserRouter([
-  // MAIN PAGES
-  { path: '/', element: <LoginPage /> },
+  // Redirecionar a rota principal "/" para "/home"
+  { path: '/', element: <Navigate to="/home" replace /> },
   { path: '/home', element: <EcommercePage /> },
   { path: '/user-list', element: <UserListPage /> },
   { path: '/professional-list', element: <ProfessionalPage /> },
